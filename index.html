@@ -171,7 +171,9 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Will you spend quality time with me forever, Yahmed?</h1>
+    <h1 id="question">
+  Will you spend quality time with me every day FOREVER, Yahmed?
+</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -291,11 +293,12 @@
 
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
-      zone.style.display = "none";
-      hint.style.display = "none";     // HIDE THE HINT
-      result.style.display = "block";
-      resizeConfettiCanvas();
-      fullScreenConfetti();
+  zone.style.display = "none";
+  hint.style.display = "none";
+  document.getElementById("question").style.display = "none"; // 👈 ADD THIS
+  result.style.display = "block";
+  resizeConfettiCanvas();
+  fullScreenConfetti();
     });
   </script>
 </body>
